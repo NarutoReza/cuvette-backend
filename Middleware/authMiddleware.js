@@ -14,7 +14,7 @@ function verifyToken(req, res, next){
         else{
             if(typeof token !== undefined){
                 const bearerToken = accessToken.split(" ")[1];
-                const decoded = jwt.verify(bearerToken, process.env.secret_token);
+                const decoded = jwt.verify(bearerToken, process.env.ACCESS_KEY);
                 req.userId = decoded.userId;
                 next();
             }
@@ -27,7 +27,7 @@ function verifyToken(req, res, next){
         }
     }
     catch(err) {
-        res.json('Access Denied.');
+        res.json(err);
     }
 }
 

@@ -1,4 +1,5 @@
 const jwt = require('jsonwebtoken');
+require('dotenv').config();
 
 const Admin = {
     _id: 'DX5pcEOHuY8m0sCt@R9M',
@@ -13,8 +14,9 @@ exports.adminLogin = async(req, res) => {
     try{
         if(name == Admin.name){
             if(password == Admin.password){
-                const token = jwt.sign({ userId: Admin._id}, 'your_secret_key', { expiresIn: '1h', })
-                res.json(token);
+                const accessToken = jwt.sign({ userId: Admin._id }, process.env.ACCESS_KEY, { expiresIn: '1h', });
+                const refreshToken = jwt.sign({ userId: Admin._id }, process.env.SECRET_KEY, { expiresIn: '24h', });
+                res.json({ accessToken: accessToken, refreshToken: refreshToken });
             }
             else res.json('Password does not match');
         }

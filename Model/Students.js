@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const Teacher = new mongoose.Schema({
+const Students = new mongoose.Schema({
     name: {
         type: String,
         required: true
@@ -65,18 +65,18 @@ const Teacher = new mongoose.Schema({
         type: String,
         required: true
     },
-    salary: {
+    feesPaid: {
         type: Number,
         required: true
     },
-    assignedClass: {
+    class: {
         type: Number,
-        default: 0
+        required: true
     },
-    assignedClassYear: {
+    classYear: {
         type: Number,
-        default: 2024
+        required: true
     }
 }, { timestamps: true });
 
-module.exports = mongoose.model('Teacher', Teacher);
+module.exports = mongoose.model('Students', Students);

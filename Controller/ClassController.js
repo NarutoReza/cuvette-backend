@@ -13,10 +13,10 @@ exports.createClass = async(req, res) => {
     try{
         const searchClass = await Class.findOne({ name: data.name, year: data.year });
 
-        if(searchClass) res.json(`Class ${data.name} of year ${data.year} already exists`);
+        if(searchClass) res.json(`Class ${data.name} of year ${data.year} already exists.`);
         else{
             const createClass = await data.save();
-            res.json(`Class ${data.name} of year ${data.year} created`);
+            res.json(`Class ${data.name} of year ${data.year} created.`);
         }
     }
     catch(err){
@@ -88,7 +88,7 @@ exports.updateClass = async(req, res) => {
 // delete a class
 exports.deleteClass = async(req, res) => {
     try{
-        const deleteClass = await Class.deleteOne({ _id: req.params.postId});
+        const deleteClass = await Class.deleteOne({ _id: req.params.postId });
         res.json(deleteClass);
     }
     catch(err){

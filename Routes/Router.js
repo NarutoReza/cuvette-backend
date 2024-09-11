@@ -30,7 +30,7 @@ router.delete('/delete-teacher/:postId', verifyToken, deleteTeacher);
 router.post('/add-student', verifyToken, addStudent);
 router.post('/students', verifyToken, getAllStudents);
 router.post('/class-students', verifyToken, getAllStudentByClass);
-router.post('/class-student', verifyToken, getAStudentByClass);
+router.post('/class-student', getAStudentByClass);
 router.patch('/update-student/:postId', verifyToken, updateAStudent);
 router.delete('/delete-student/:postId', verifyToken, deleteAStudent);
 

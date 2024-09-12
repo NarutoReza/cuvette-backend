@@ -47,6 +47,19 @@ exports.getAllTeachers = async(req, res) => {try{
     }
 }
 
+// get one teacher
+exports.getOneTeacher = async(req, res) => {
+    const name = req.body.name;
+    const dob = req.body.dob;
+    try{
+        const getOneTeacher = await Teacher.findOne({ name: name, dob: dob });
+        res.json(getOneTeacher);
+    }
+    catch(err){
+        res.json(err);
+    }
+}
+
 // get a teacher
 exports.getTeacherByClass = async(req, res) => {
     const assignedClass = req.body.assignedClass;

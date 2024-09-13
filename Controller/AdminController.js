@@ -23,7 +23,6 @@ exports.adminLogin = async(req, res) => {
         else res.json('Admin name does not match');
     }
     catch(err){
-        res.json(err);
+        res.json('Not accessible');
     }
 }
-

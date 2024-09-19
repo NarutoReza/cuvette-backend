@@ -76,6 +76,10 @@ const Students = new mongoose.Schema({
     classYear: {
         type: Number,
         required: true
+    },
+    rollNo: {
+        type: Number,
+        required: true
     }
 }, { timestamps: true });
 

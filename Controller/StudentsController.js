@@ -21,7 +21,8 @@ exports.addStudent = async(req, res) => {
         email: req.body.email,
         feesPaid: req.body.feesPaid,
         class: req.body.class,
-        classYear: req.body.classYear
+        classYear: req.body.classYear,
+        rollNo: req.body.rollNo
     })
     try{
         const searchStudent = await Students.findOne({ name: data.name, dob: data.dob, class: data.class, classYear: data.classYear });
@@ -105,7 +106,8 @@ exports.updateAStudent = async(req, res) => {
                     email: req.body.email,
                     feesPaid: req.body.feesPaid,
                     class: req.body.class,
-                    classYear: req.body.classYear
+                    classYear: req.body.classYear,
+                    rollNo: req.body.rollNo
                 }
             }
         );

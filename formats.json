@@ -1,28 +1,53 @@
 // adding a teacher
 
 {
-    "name": "",
-    "gender": "",
-    "dob": "",
-    "permanentAddress": {
-      "street_name": "",
-      "city": "",
-      "state": "",
-      "pinCode": "",
-      "country": ""
-    },
-    "correspondenceAddress": {
-      "street_name": "",
-      "city": "",
-      "state": "",
-      "pinCode": "",
-      "country": ""
-    },
-    "mobile": "",
-    "mobile2": "",
-    "email": "",
-    "salary": "",
-    "assignedClass": "",
-    "assignedClassYear": "",
-    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJEWDVwY0VPSHVZOG0wc0N0QFI5TSIsImlhdCI6MTcyNTk5NjM4MywiZXhwIjoxNzI2MDgyNzgzfQ.l9-5NW6I2JOiPaYzK32YoyV8GJmySSLYRff_G94g980"
+  "name": "",
+  "gender": "",
+  "dob": "",
+  "permanentAddress": {
+    "street_name": "",
+    "city": "",
+    "state": "",
+    "pinCode": "",
+    "country": ""
+  },
+  "correspondenceAddress": {
+    "street_name": "",
+    "city": "",
+    "state": "",
+    "pinCode": "",
+    "country": ""
+  },
+  "mobile": "",
+  "mobile2": "",
+  "email": "",
+  "salary": "",
+  "assignedClass": "",
+  "assignedClassYear": "",
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJEWDVwY0VPSHVZOG0wc0N0QFI5TSIsImlhdCI6MTcyNTk5NjM4MywiZXhwIjoxNzI2MDgyNzgzfQ.l9-5NW6I2JOiPaYzK32YoyV8GJmySSLYRff_G94g980"
+}
+
+// adding a student
+
+{
+  "name": "",
+  "gender": "",
+  "dob": "",
+  "permanentAddressStreetName": "",
+  "permanentAddressCity": "",
+  "permanentAddressState": "",
+  "permanentAddressPinCode": "",
+  "permanentAddressCountry": "",
+  "correspondenceAddressStreetName": "",
+  "correspondenceAddressCity": "",
+  "correspondenceAddressState": "",
+  "correspondenceAddressPinCode": "",
+  "correspondenceAddressCountry": "",
+  "mobile": "",
+  "mobile2": "",
+  "email": "",
+  "feesPaid": "",
+  "class": "",
+  "classYear": "",
+  "rollNo": ""
 }

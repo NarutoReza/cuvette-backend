@@ -28,8 +28,12 @@ exports.addStudent = async(req, res) => {
         const searchStudent = await Students.findOne({ name: data.name, dob: data.dob, class: data.class, classYear: data.classYear });
         if(searchStudent) res.json(`Student with name: '${data.name}' and dob: '${data.dob}' in class ${data.class} of year ${data.classYear} already exists`);
         else{
-            const addStudent = await data.save();
-            res.json(`Student with name: '${data.name}' and dob: '${data.dob}' added in class ${data.class} of year ${data.classYear}.`)
+            const studentCount = await Students.find();
+            if(studentCount.length < 30){
+                const addStudent = await data.save();
+                res.json(`Student with name: '${data.name}' and dob: '${data.dob}' added in class ${data.class} of year ${data.classYear}.`);
+            }
+            else res.json(`The class ${data.class} has been filled with 30 students. No more can be added.`)
         }
     }
     catch(err){
